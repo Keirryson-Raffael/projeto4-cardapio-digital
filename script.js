@@ -1,6 +1,6 @@
 let nome = prompt("Qual é o seu nome?")
 let verificacao = prompt(`Você é estudante? (sim/nao)`).toLowerCase()
-let prato1 = parseInt(prompt(`Escolha o primeiro prato com os números entre 1 e 4: 
+let prato1 = parseFloat(prompt(`Escolha o primeiro prato com os números entre 1 e 4: 
     (1) Hambúrguer - R$ 20
     (2) Pizza - R$ 35
     (3) Refrigerante - R$ 5
@@ -35,7 +35,7 @@ if (prato1 === 5) {
             alert(`Escolha uma das opções`)
     }
 
-    let prato2 = parseInt(prompt(`Escolha o segundo prato com os números entre 1 e 4: 
+    let prato2 = parseFloat(prompt(`Escolha o segundo prato com os números entre 1 e 4: 
                 (1) Hambúrguer - R$ 20
                 (2) Pizza - R$ 35
                 (3) Refrigerante - R$ 5
@@ -67,7 +67,7 @@ if (prato1 === 5) {
                 alert("Batata Frita - R$ 12")
                 break
         }
-        let prato3 = parseInt(prompt(`Escolha o terceiro prato com os números entre 1 e 4: 
+        let prato3 = parseFloat(prompt(`Escolha o terceiro prato com os números entre 1 e 4: 
                         (1) Hambúrguer - R$ 20
                         (2) Pizza - R$ 35
                         (3) Refrigerante - R$ 5
@@ -127,3 +127,4 @@ if (prato1 === 5) {
         }
     }
 }
+
