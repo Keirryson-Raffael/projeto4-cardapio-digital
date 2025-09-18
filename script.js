@@ -105,9 +105,9 @@ if (prato1 === 5) {
             if (verificacao === "sim" && precoitem + precoitem2 + precoitem3 >= 50) {
                 alert(`Obrigado ${nome}!
 Pratos escolhidos: 
-${item} de ${precoitem}
-${item2} de ${precoitem2} 
-${item3} de ${precoitem3}
+${item} de ${precoitem} R$
+${item2} de ${precoitem2} R$
+${item3} de ${precoitem3} R$
 Total sem desconto: R$ ${precoitem + precoitem2 + precoitem3}
 Total com desconto: R$ ${precoitem + precoitem2 + precoitem3 - (((precoitem + precoitem2 + precoitem3) * 0.10) + ((precoitem + precoitem2 + precoitem3)* 0.05))}`)
             } else if (verificacao === "não" && precoitem + precoitem2 + precoitem3 >= 50) {
@@ -139,4 +139,5 @@ Total com desonto: Você não possui nenhum desconto.`)
     }
 
 }
+
 
