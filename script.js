@@ -67,6 +67,8 @@ if (prato1 === 5) {
                 precoitem2 = 12
                 alert("Batata Frita - R$ 12")
                 break
+            default:
+    alert(`Escolha uma das opções`)
         }
         let prato3 = parseFloat(prompt(`Escolha o terceiro prato com os números entre 1 e 4: 
     (1) Hambúrguer - R$ 20
@@ -100,6 +102,8 @@ if (prato1 === 5) {
                     precoitem3 = 12
                     alert("Batata Frita - R$ 12")
                     break
+                default:
+    alert(`Escolha uma das opções`)
             }
 
             if (verificacao === "sim" && precoitem + precoitem2 + precoitem3 >= 50) {
@@ -139,5 +143,6 @@ Total com desonto: Você não possui nenhum desconto.`)
     }
 
 }
+
 
 
