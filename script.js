@@ -109,7 +109,7 @@ ${item} de ${precoitem}
 ${item2} de ${precoitem2} 
 ${item3} de ${precoitem3}
 Total sem desconto: R$ ${precoitem + precoitem2 + precoitem3}
-Total com desconto: R$ ${precoitem + precoitem2 + precoitem3 - ((precoitem + precoitem2 + precoitem3) * 0.10) + ((precoitem + precoitem2 + precoitem3)* 0.05)}`)
+Total com desconto: R$ ${precoitem + precoitem2 + precoitem3 - (((precoitem + precoitem2 + precoitem3) * 0.10) + ((precoitem + precoitem2 + precoitem3)* 0.05))}`)
             } else if (verificacao === "não" && precoitem + precoitem2 + precoitem3 >= 50) {
                 alert(`Obrigado ${nome}!
 Pratos escolhidos: 
@@ -139,3 +139,4 @@ Total com desonto: Você não possui nenhum desconto.`)
     }
 
 }
+
