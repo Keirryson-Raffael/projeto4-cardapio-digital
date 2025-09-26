@@ -1,5 +1,10 @@
 let nome = prompt("Qual é o seu nome?")
 let verificacao = prompt(`Você é estudante? (sim/não)`).toLowerCase()
+
+let precoitem = 0
+let precoitem2 = 0
+let precoitem3 = 0
+
 let prato1 = parseFloat(prompt(`Escolha o primeiro prato com os números entre 1 e 4: 
     (1) Hambúrguer - R$ 20
     (2) Pizza - R$ 35
@@ -13,22 +18,22 @@ if (prato1 === 5) {
     switch (prato1) {
         case 1:
             item = "Hambúrguer"
-            precoitem = 20
+            precoitem = +20
             alert("Hambúrguer - R$ 20")
             break
         case 2:
             item = "Pizza"
-            precoitem = 35
+            precoitem = +35
             alert("Pizza - R$ 35")
             break
         case 3:
             item = "Refrigerante"
-            precoitem = 5
+            precoitem = +5
             alert("Refrigerante - R$ 5")
             break
         case 4:
             item = "Batata Frita"
-            precoitem = 12
+            precoitem = +12
             alert("Batata Frita - R$ 12")
             break
         default:
@@ -143,6 +148,7 @@ Total com desonto: Você não possui nenhum desconto.`)
     }
 
 }
+
 
 
 
