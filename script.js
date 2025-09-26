@@ -1,9 +1,13 @@
+let item
+let item2
+let item3
+
+let precoitem
+let precoitem2
+let precoitem3
+
 let nome = prompt("Qual é o seu nome?")
 let verificacao = prompt(`Você é estudante? (sim/não)`).toLowerCase()
-
-let precoitem = 0
-let precoitem2 = 0
-let precoitem3 = 0
 
 let prato1 = parseFloat(prompt(`Escolha o primeiro prato com os números entre 1 e 4: 
     (1) Hambúrguer - R$ 20
@@ -18,26 +22,24 @@ if (prato1 === 5) {
     switch (prato1) {
         case 1:
             item = "Hambúrguer"
-            precoitem = +20
+            precoitem = 20.00
             alert("Hambúrguer - R$ 20")
             break
         case 2:
             item = "Pizza"
-            precoitem = +35
+            precoitem = 35.00
             alert("Pizza - R$ 35")
             break
         case 3:
             item = "Refrigerante"
-            precoitem = +5
+            precoitem = 5.00
             alert("Refrigerante - R$ 5")
             break
         case 4:
             item = "Batata Frita"
-            precoitem = +12
+            precoitem = 12.00
             alert("Batata Frita - R$ 12")
             break
-        default:
-            alert(`Escolha uma das opções`)
     }
 
     let prato2 = parseFloat(prompt(`Escolha o segundo prato com os números entre 1 e 4: 
@@ -54,26 +56,24 @@ if (prato1 === 5) {
         switch (prato2) {
             case 1:
                 item2 = "Hambúrguer"
-                precoitem2 = 20
+                precoitem2 = 20.00
                 alert("Hambúrguer - R$ 20")
                 break
             case 2:
                 item2 = "Pizza"
-                precoitem2 = 35
+                precoitem2 = 35.00
                 alert("Pizza - R$ 35")
                 break
             case 3:
                 item2 = "Refrigerante"
-                precoitem2 = 5
+                precoitem2 = 5.00
                 alert("Refrigerante - R$ 5")
                 break
             case 4:
                 item2 = "Batata Frita"
-                precoitem2 = 12
+                precoitem2 = 12.00
                 alert("Batata Frita - R$ 12")
                 break
-            default:
-    alert(`Escolha uma das opções`)
         }
         let prato3 = parseFloat(prompt(`Escolha o terceiro prato com os números entre 1 e 4: 
     (1) Hambúrguer - R$ 20
@@ -89,58 +89,56 @@ if (prato1 === 5) {
             switch (prato3) {
                 case 1:
                     item3 = "Hambúrguer"
-                    precoitem3 = 20
+                    precoitem3 = 20.00
                     alert("Hambúrguer - R$ 20")
                     break
                 case 2:
                     item3 = "Pizza"
-                    precoitem3 = 35
+                    precoitem3 = 35.00
                     alert("Pizza - R$ 35")
                     break
                 case 3:
                     item3 = "Refrigerante"
-                    precoitem3 = 5
+                    precoitem3 = 5.00
                     alert("Refrigerante - R$ 5")
                     break
                 case 4:
                     item3 = "Batata Frita"
-                    precoitem3 = 12
+                    precoitem3 = 12.00
                     alert("Batata Frita - R$ 12")
                     break
-                default:
-    alert(`Escolha uma das opções`)
             }
-
+            
             if (verificacao === "sim" && precoitem + precoitem2 + precoitem3 >= 50) {
                 alert(`Obrigado ${nome}!
 Pratos escolhidos: 
-${item} de ${precoitem} R$
-${item2} de ${precoitem2} R$
-${item3} de ${precoitem3} R$
+${item} de R$ ${precoitem}
+${item2} de R$ ${precoitem2}
+${item3} de R$ ${precoitem3}
 Total sem desconto: R$ ${precoitem + precoitem2 + precoitem3}
-Total com desconto: R$ ${precoitem + precoitem2 + precoitem3 - (((precoitem + precoitem2 + precoitem3) * 0.10) + ((precoitem + precoitem2 + precoitem3)* 0.05))}`)
+Total com desconto: R$ ${precoitem + precoitem2 + precoitem3 - (((precoitem + precoitem2 + precoitem3) * 0.10) + ((precoitem + precoitem2 + precoitem3)* 0.05)).toFixed(2)}`)
             } else if (verificacao === "não" && precoitem + precoitem2 + precoitem3 >= 50) {
                 alert(`Obrigado ${nome}!
 Pratos escolhidos: 
-${item} de ${precoitem}
-${item2} de ${precoitem2} 
-${item3} de ${precoitem3}
+${item} de R$ ${precoitem}
+${item2} de R$ ${precoitem2} 
+${item3} de R$ ${precoitem3}
 Total sem desconto: R$ ${precoitem + precoitem2 + precoitem3}
-Total com desconto: R$ ${precoitem + precoitem2 + precoitem3 - ((precoitem + precoitem2 + precoitem3) * 0.05)}`)
+Total com desconto: R$ ${precoitem + precoitem2 + precoitem3 - ((precoitem + precoitem2 + precoitem3) * 0.05).toFixed(2)}`)
             } else if (verificacao === "sim" && precoitem + precoitem2 + precoitem3 <= 50) {
                 alert(`Obrigado ${nome}!
 Pratos escolhidos: 
-${item} de ${precoitem}
-${item2} de ${precoitem2} 
-${item3} de ${precoitem3}
+${item} de R$ ${precoitem}
+${item2} de R$ ${precoitem2} 
+${item3} de R$ ${precoitem3}
 Total sem desconto: R$ ${precoitem + precoitem2 + precoitem3} 
-Total com desonto: R$ ${precoitem + precoitem2 + precoitem3 - ((precoitem + precoitem2 + precoitem3) * 0.10)}`)
+Total com desonto: R$ ${precoitem + precoitem2 + precoitem3 - ((precoitem + precoitem2 + precoitem3) * 0.10).toFixed(2)}`)
             } else {
                 alert(`Obrigado ${nome}!
 Pratos escolhidos: 
-${item} de ${precoitem}
-${item2} de ${precoitem2} 
-${item3} de ${precoitem3}
+${item} de R$ ${precoitem}
+${item2} de R$ ${precoitem2} 
+${item3} de R$ ${precoitem3}
 Total sem desconto: R$ ${precoitem + precoitem2 + precoitem3} 
 Total com desonto: Você não possui nenhum desconto.`)
             }
@@ -148,6 +146,7 @@ Total com desonto: Você não possui nenhum desconto.`)
     }
 
 }
+
 
 
 
